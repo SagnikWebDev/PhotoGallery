@@ -1,0 +1,135 @@
+* {
+  color: white;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* top part */
+body {
+  position: relative;
+}
+.top {
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  padding-right: 15px !important;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+.top header {
+  font-size: 24px;
+}
+ul {
+  display: flex;
+  gap: 10px;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+header:hover,
+a:hover {
+  color: aqua;
+}
+/* main start */
+main {
+  position: relative;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+}
+/* owner part */
+.owner {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.owner h1 {
+  font-size: 34px;
+  text-align: center;
+}
+.owner p {
+  text-align: justify;
+}
+.owner button {
+  color: black !important;
+  background-color: aqua;
+  border: none;
+  padding-block: 7px;
+  padding-inline: 20px;
+}
+/* photos part */
+.photos {
+  overflow: hidden;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.photos > div {
+  padding: 5px;
+}
+@media screen and (max-width: 500px) {
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .top {
+    width: 100%;
+    padding: 10px;
+    padding-right: 15px !important;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul {
+    display: none;
+  }
+  .photos {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 636px) {
+  .owner {
+    min-width: 280px;
+  }
+  .owner h1 {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  .photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 280px) and (max-width: 320px) {
+  .owner {
+    min-width: 240px;
+  }
+  .owner h1 {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 500px) {
+  img {
+    aspect-ratio: 3/2;
+    width: 100%;
+    object-fit: cover;
+  }
+}
