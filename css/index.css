@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 /* top part */
 body {
@@ -58,14 +59,14 @@ main {
   align-items: center;
   gap: 20px;
 }
-.owner h1 {
+#owner-h1 {
   font-size: 34px;
   text-align: center;
 }
-.owner p {
+#Owner-description {
   text-align: justify;
 }
-.owner button {
+#owner-button {
   color: black !important;
   background-color: aqua;
   border: none;
@@ -109,7 +110,7 @@ main {
   .owner {
     min-width: 280px;
   }
-  .owner h1 {
+  #owner-h1 {
     font-size: 24px;
   }
 }
@@ -122,7 +123,7 @@ main {
   .owner {
     min-width: 240px;
   }
-  .owner h1 {
+  #owner-h1 {
     font-size: 22px;
   }
 }
